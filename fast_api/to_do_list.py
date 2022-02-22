@@ -54,7 +54,7 @@ def altera_status(id: int):
 @app.post("deletaTarefa")
 def deleta_tarefa(id: int):
     try:
-        lista[id].realizada = not lista[id].realizada
+        del lista[id]
         return {"status": "sucesso"}
     except:
         return {"status": "erro"}
